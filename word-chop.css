@@ -3,9 +3,9 @@ All css for lexicony
 */
 @font-face {
     font-family: Quicksand;
-    src:url('/Quicksand/Quicksand-VariableFont_wght.ttf')
-        url('/Quicksand/Quicksand-VariableFont_wght.eot')
-        url('/Quicksand/Quicksand-VariableFont_wght.woff');
+    src:url('Assets/Quicksand/Quicksand-VariableFont_wght.eot')
+        url('Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
+        url('Assets/Quicksand/Quicksand-VariableFont_wght.woff');
 }
 
 
@@ -93,6 +93,27 @@ All css for lexicony
     height: 100vh;
     width: 100vw;
 }
+
+.lives{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.winStatement{
+    font-size: 4rem;
+    font-family: Quicksand;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    margin: 1rem;
+    border: solid;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 
 .word{
     

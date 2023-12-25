@@ -109,5 +109,5 @@ if(wordChecker.toString() === guessWord.toString()){ //win condition
 
 function directHome(){
 
-  window.location.href= 'word-chop-home.html';
+  window.location.href= 'index.html';
 }
