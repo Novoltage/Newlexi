@@ -3,9 +3,9 @@ All css for lexicony
 */
 @font-face {
     font-family: Quicksand;
-    src:url('Assets/Quicksand/Quicksand-VariableFont_wght.eot')
-        url('Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
-        url('Assets/Quicksand/Quicksand-VariableFont_wght.woff');
+    src:url('/Assets/Quicksand/Quicksand-VariableFont_wght.eot')
+        url('/Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
+        url('/Assets/Quicksand/Quicksand-VariableFont_wght.woff');
 }
 
 
