@@ -3,7 +3,7 @@ auto page reload fixed, create div(guess box) with id and class attached,css for
 
 10/22
 */
-
+toGuess = "";
 guessWord = [''] ;
 wordChecker = [''];
 let life = 5;
@@ -16,7 +16,7 @@ let Word = inputElement.value;
 Word = Word.replace(" ", "");
 Word = Word.toUpperCase();
 const Hint =inputElement2.value;
-
+toGuess = Word;
 for (let i = 0; i < Word.length; i++) {
 const a = Word.slice(i, (i+1));
 guessWord.push(a);
@@ -32,7 +32,10 @@ document.getElementById("word").classList.replace("word", "off")
 document.getElementById("tbanner").classList.replace("tbanner", "off")
 
 document.getElementById("hintBox").classList.replace("off", "hintBox")
-
+for(i=1; i<6; i++ ){
+  document.getElementById(`l${i}`).classList.remove("off");
+  console.log(`${i}`);
+}
 }
 
 
@@ -72,8 +75,9 @@ for(i=0; i != -1;) {
 i = guessWord.indexOf(letter, i+1); // +1 so it starts after the letter it finds
 
 if(i === -1 && c ===0){
+  document.getElementById(`l${life}`).classList.add("disable");
   life--
-  alert(`wrong \n You have ${life} tries left`)
+  //alert(`wrong \n You have ${life} tries left`)
   
 }else{
   //console.log(guessWord[i]);
@@ -86,7 +90,9 @@ if(i === -1 && c ===0){
 document.getElementById(`${letter}`).classList.add("disable");
 
 if(wordChecker.toString() === guessWord.toString()){ //win condition
-  document.querySelector(".Print").innerHTML = `You win! Good Job Guessing the word ${aRandomWord}`;
+  document.getElementById("letters").classList.replace("letters", "off");
+  document.getElementById("winstatementbox").classList.replace("off", "letters");
+  document.getElementById("winstatement").innerHTML = `You win! Good Job Guessing the word ${toGuess}. Wait to Play again`;
   //alert("You Win!")
   //reset();
   setTimeout(function(){
@@ -96,12 +102,14 @@ if(wordChecker.toString() === guessWord.toString()){ //win condition
   
 
 }else if (life ===0){ //lose condition
-  document.querySelector(".Print").innerHTML = `You lose! The word was ${aRandomWord}`;
+  document.getElementById("letters").classList.replace("letters", "off");
+  document.getElementById("winstatementbox").classList.replace("off", "letters");
+  document.getElementById("winstatement").innerHTML = `You Lose! The word was ${toGuess}. Wait to try again`;
   //alert(`You Lose! The word was ${aRandomWord}`)
-  //reset();
   setTimeout(function(){
     reset();
  }, 5000);
+  //location.reload(true)
 }
 }
 

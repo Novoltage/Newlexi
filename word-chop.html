@@ -16,6 +16,24 @@
         <button class="ready" onclick="wordGenerator()">Ready?</button>
       
       </div>
+
+      <div class="lives">
+        <div id="l5" class="off">
+          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+        </div>
+        <div id="l4" class="off">
+          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+        </div>
+        <div id="l3" class="off">
+          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+        </div>
+        <div id="l2" class="off">
+          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+        </div>
+        <div id="l1" class="off">
+          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+        </div>
+      </div>
       <div id="guessBox" class="guessBox">
   <div id="0"></div>
 </div>
@@ -48,6 +66,10 @@
     <button id="Y" class="letter" onclick="guess('Y')">Y</button>
     <button id="Z" class="letter" onclick="guess('Z')">Z</button>
     <button class="reset" onclick="reset()">Reset</button>
+</div>
+
+<div id="winstatementbox" class="off">
+  <p id="winstatement" class="winstatement"></p>
 </div>
 
 <div id="hintBox" class="off">
