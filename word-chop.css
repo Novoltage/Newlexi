@@ -3,9 +3,9 @@ All css for lexicony
 */
 @font-face {
     font-family: Quicksand;
-    src:url('/Assets/Quicksand/Quicksand-VariableFont_wght.eot')
-        url('/Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
-        url('/Assets/Quicksand/Quicksand-VariableFont_wght.woff');
+    src:url('./Assets/Quicksand/Quicksand-VariableFont_wght.eot')
+        url('./Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
+        url('./Assets/Quicksand/Quicksand-VariableFont_wght.woff');
 }
 
 
@@ -15,6 +15,15 @@ All css for lexicony
     margin: 0;
     font-family:Quicksand;
     
+}
+
+button *{
+
+    color: black;
+}
+
+body{
+    font-family: Quicksand;
 }
 
 .background{
@@ -104,7 +113,7 @@ All css for lexicony
 
 .winStatement{
     font-size: 4rem;
-    font-family: Quicksand;
+    font-family: inherit;
     width: 5rem;
     aspect-ratio: 1/1;
     margin: 1rem;
@@ -178,7 +187,7 @@ All css for lexicony
 }
 .letter{
     font-size: 4rem;
-    font-family: Quicksand;
+    color: inherit;
     width: 5rem;
     aspect-ratio: 1/1;
     margin: 1rem;
