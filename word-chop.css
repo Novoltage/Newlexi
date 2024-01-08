@@ -13,7 +13,7 @@ All css for lexicony
     
     padding: 0;
     margin: 0;
-    font-family:Quicksand;
+    font-family: Quicksand;
     
 }
 
@@ -38,9 +38,7 @@ body{
 	}
 }
 
-.mobiletext{
-    font-family: inherit;
-}
+
 
 .background{
     background-image: linear-gradient(to top right, #EA8D8D, #A890FE);
@@ -132,7 +130,7 @@ body{
 
 .winStatement{
     font-size: 4rem;
-    font-family: inherit;
+    font-family: Quicksand;
     width: 5rem;
     aspect-ratio: 1/1;
     margin: 1rem;
@@ -165,7 +163,7 @@ body{
 }
 
 .wordChoice{
-    font-size: inherit;
+    font-size: Quicksand;
     height: 4rem;
     margin-left: .5rem;
     border: solid;
@@ -278,7 +276,7 @@ body{
 
 }
 
-@media screen and (min-width: 600px){ 
+@media screen and (min-width: 801px){ 
     
 .background{
     background-image: linear-gradient(to top right, #EA8D8D, #A890FE);
