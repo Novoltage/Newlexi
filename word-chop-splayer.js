@@ -2032,6 +2032,7 @@ document.querySelector(".Print").innerHTML = Hint;
 document.getElementById("letters").classList.replace("off", "letters");
 document.getElementById("word").classList.replace("word", "off");
 document.getElementById("hintBox").classList.replace("off", "hintBox");
+document.getElementById("guessBox").classList.replace("off", "guessBox");
 for(i=1; i<6; i++ ){
   document.getElementById(`l${i}`).classList.remove("off");
   console.log(`${i}`);
