@@ -209,7 +209,7 @@ body{
 .letters{
     display: inline-block;
     font-size: 4rem;
-    width: 95%;
+    width: 80%;
     height: fit-content;
     text-align: center;
     justify-items: center;
@@ -218,7 +218,7 @@ body{
     box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
     @media screen and (min-width: 801px){
     font-size: 0;
-    width: 80%;
+    
     }
     
 }
@@ -277,7 +277,7 @@ body{
 }
 
 .guessBox{
-    margin: 3rem;
+    margin: 1rem;
     width: fit-content;
     display:flex;
     flex-wrap: wrap;

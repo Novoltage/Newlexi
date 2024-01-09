@@ -1,83 +1,85 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="word-chop.css"/>
-    <title>Lexicony</title>
-  </head>
-  <body>
-    
-     <section class="display">
-      
-       
-      <div id="word" class="word">
-        <button class="sready" onclick="getRandomWord();">Ready?</button>
+
+<head>
+  <link rel="stylesheet" href="word-chop.css" />
+  <title>Lexicony</title>
+</head>
+
+<body>
+
+  <section class="display">
+
+
+    <div id="word" class="word">
+      <button class="sready" onclick="getRandomWord();">Ready?</button>
+    </div>
+    <div class="lives">
+      <div id="l5" class="off">
+        <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div class="lives">
-        <div id="l5" class="off">
-          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
-        </div>
-        <div id="l4" class="off">
-          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
-        </div>
-        <div id="l3" class="off">
-          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
-        </div>
-        <div id="l2" class="off">
-          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
-        </div>
-        <div id="l1" class="off">
-          <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
-        </div>
+      <div id="l4" class="off">
+        <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div id="guessBox" class="off">
-  <div id="0"></div>
-</div>
+      <div id="l3" class="off">
+        <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+      </div>
+      <div id="l2" class="off">
+        <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+      </div>
+      <div id="l1" class="off">
+        <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
+      </div>
+    </div>
+    <div id="guessBox" class="off">
+      <div id="0"></div>
+    </div>
+    <div id="hintBox" class="off">
+      <p class="Print"> </p>
+    </div>
+    <div id="letters" class="off">
+      <button id="A" class="letter" onclick="guess('A')">A</button>
+      <button id="B" class="letter" onclick="guess('B')">B</button>
+      <button id="C" class="letter" onclick="guess('C')">C</button>
+      <button id="D" class="letter" onclick="guess('D')">D</button>
+      <button id="E" class="letter" onclick="guess('E')">E</button>
+      <button id="F" class="letter" onclick="guess('F')">F</button>
+      <button id="G" class="letter" onclick="guess('G')">G</button>
+      <button id="H" class="letter" onclick="guess('H')">H</button>
+      <button id="I" class="letter" onclick="guess('I')">I</button>
+      <button id="J" class="letter" onclick="guess('J')">J</button>
+      <button id="K" class="letter" onclick="guess('K')">K</button>
+      <button id="L" class="letter" onclick="guess('L')">L</button>
+      <button id="M" class="letter" onclick="guess('M')">M</button>
+      <button id="N" class="letter" onclick="guess('N')">N</button>
+      <button id="O" class="letter" onclick="guess('O')">O</button>
+      <button id="P" class="letter" onclick="guess('P')">P</button>
+      <button id="Q" class="letter" onclick="guess('Q')">Q</button>
+      <button id="R" class="letter" onclick="guess('R')">R</button>
+      <button id="S" class="letter" onclick="guess('S')">S</button>
+      <button id="T" class="letter" onclick="guess('T')">T</button>
+      <button id="U" class="letter" onclick="guess('U')">U</button>
+      <button id="V" class="letter" onclick="guess('V')">V</button>
+      <button id="W" class="letter" onclick="guess('W')">W</button>
+      <button id="X" class="letter" onclick="guess('X')">X</button>
+      <button id="Y" class="letter" onclick="guess('Y')">Y</button>
+      <button id="Z" class="letter" onclick="guess('Z')">Z</button>
+      <button class="reset" onclick="reset()">Reset</button>
 
-<div id="letters" class="off">
-    <button id="A" class="letter" onclick="guess('A')" >A</button>
-    <button id="B" class="letter" onclick="guess('B')" >B</button>
-    <button id="C" class="letter" onclick="guess('C')">C</button>
-    <button id="D" class="letter" onclick="guess('D')">D</button>
-    <button id="E" class="letter" onclick="guess('E')">E</button>
-    <button id="F" class="letter" onclick="guess('F')">F</button>
-    <button id="G" class="letter" onclick="guess('G')">G</button>
-    <button id="H" class="letter" onclick="guess('H')">H</button>
-    <button id="I" class="letter" onclick="guess('I')">I</button>
-    <button id="J" class="letter" onclick="guess('J')">J</button>
-    <button id="K" class="letter" onclick="guess('K')">K</button>
-    <button id="L" class="letter" onclick="guess('L')">L</button>
-    <button id="M" class="letter" onclick="guess('M')">M</button>
-    <button id="N" class="letter" onclick="guess('N')">N</button>
-    <button id="O" class="letter" onclick="guess('O')">O</button>
-    <button id="P" class="letter" onclick="guess('P')">P</button>
-    <button id="Q" class="letter" onclick="guess('Q')">Q</button>
-    <button id="R" class="letter" onclick="guess('R')">R</button>
-    <button id="S" class="letter" onclick="guess('S')">S</button>
-    <button id="T" class="letter" onclick="guess('T')">T</button>
-    <button id="U" class="letter" onclick="guess('U')">U</button>
-    <button id="V" class="letter" onclick="guess('V')">V</button>
-    <button id="W" class="letter" onclick="guess('W')">W</button>
-    <button id="X" class="letter" onclick="guess('X')">X</button>
-    <button id="Y" class="letter" onclick="guess('Y')">Y</button>
-    <button id="Z" class="letter" onclick="guess('Z')">Z</button>
-    <button class="reset" onclick="reset()">Reset</button>
-    
-</div>
+    </div>
 
-<div id="winstatementbox" class="off">
-  <p id="winstatement" class="winstatement"></p>
-</div>
+    <div id="winstatementbox" class="off">
+      <p id="winstatement" class="winstatement"></p>
+    </div>
 
-<div id="hintBox" class="off">
-  <p class="Print"> </p>    
-       </div>
-       <button class="quit" onclick="directHome();">Quit
-      </button>
-     </section>
-     
-    <script src="word-chop-splayer.js">
-        
-    </script>
-  </body>
+
+    <button class="quit" onclick="directHome();">Quit
+    </button>
+  </section>
+
+  <script src="word-chop-splayer.js">
+
+  </script>
+</body>
+
 </html>
