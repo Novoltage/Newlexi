@@ -67,7 +67,7 @@ body{
 .bannerLabel{
     
     font-weight: 700;
-    font-size: 7rem;
+    font-size: 10rem;
     text-align: center;
     font-family: inherit;
     
@@ -92,10 +92,10 @@ body{
 
 .splayer{
     color: inherit;
-    font-size: 4rem;
+    font-size: 7rem;
     border: solid;
     padding: .5rem;
-    margin: 1rem;
+    margin: 3rem;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
@@ -103,10 +103,10 @@ body{
 
 .tplayer{
     color: inherit;
-    font-size: 4rem;
+    font-size: 7rem;
     border: solid;
     padding: .5rem;
-    margin: 1rem;
+    margin: 3rem;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -188,10 +188,9 @@ body{
 }
 
 .sready{
-    font-size: 5rem;
+    font-size: 7rem;
     padding: 1rem;
     border: solid;
-    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .ready{
@@ -199,7 +198,6 @@ body{
     padding: 1rem;
     margin-left: .5rem;
     border: solid;
-    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .off{
@@ -208,7 +206,6 @@ body{
 
 .letters{
     display: inline-block;
-    font-size: 4rem;
     width: 80%;
     height: fit-content;
     text-align: center;
@@ -223,7 +220,7 @@ body{
     
 }
 .letter{
-    font-size: 4rem;
+    font-size: 7rem;
     color: inherit;
     width: 5rem;
     aspect-ratio: 1/1;
@@ -278,10 +275,9 @@ body{
 
 .guessBox{
     margin: 1rem;
-    width: fit-content;
+    width: 90%;
     display:flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto);
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -289,11 +285,15 @@ body{
         margin: 1rem;
         
     }
+    @media screen and (max-width:500px) {
+        margin: 3rem;
+
+    }
 
 }
 
 .hintBox{
-    font-size: 3rem;
+    width: 79%;
     border: solid;
     padding: .5rem;
     margin: 2rem;
@@ -306,6 +306,7 @@ body{
 }
 
 .Print{
+    font-size: 3rem;
     @media screen and (min-width: 801px){
         font-size: 2rem;
         font-family: inherit;
@@ -322,12 +323,47 @@ body{
     margin: 2rem;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 
     @media screen and (min-width: 801px){
         font-size: 2rem;
         padding: .5rem;
     }
+
 }
+.ready-effect{
+ background-color: white;
+ overflow: hidden;
+ position: relative;;
+}
+
+.ready-effect:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.ready-effect:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@keyframes shiny-btn1 {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
 /*
 @media screen and (min-width: 801px){ 
     
