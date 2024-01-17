@@ -2092,6 +2092,7 @@ document.getElementById(`${letter}`).classList.add("disable");
 
 if(wordChecker.toString() === guessWord.toString()){ //win condition
   document.getElementById("letters").classList.replace("letters", "off");
+  document.getElementById("hintBox").classList.replace("hintBox", "off");
   document.getElementById("winstatementbox").classList.replace("off", "letters");
   document.getElementById("winstatement").innerHTML = `You win! Good Job Guessing the word ${aRandomWord}. Wait to Play again`;
   //alert("You Win!")
@@ -2104,6 +2105,7 @@ if(wordChecker.toString() === guessWord.toString()){ //win condition
 
 }else if (life ===0){ //lose condition
   document.getElementById("letters").classList.replace("letters", "off");
+  document.getElementById("hintBox").classList.replace("hintBox", "off");
   document.getElementById("winstatementbox").classList.replace("off", "letters");
   document.getElementById("winstatement").innerHTML = `You Lose! The word was ${aRandomWord}. Wait to try again`;
   //alert(`You Lose! The word was ${aRandomWord}`)

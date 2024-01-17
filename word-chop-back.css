@@ -99,7 +99,21 @@ img {
     background-image: linear-gradient(to top right, #EA8D8D, #A890FE);
     height: 100vh;
     width: 100vw;
+    animation: gradient 15s ease infinite;
+    background-size: 250% 250%;
     overflow: scroll;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .lives{
@@ -110,15 +124,10 @@ img {
     align-items: center;
 }
 
-.winStatement{
-    font-size: 5vw;
+.winstatement{
+    font-size: 3rem;
     font-family: Quicksand;
-    width: 5rem;
-    aspect-ratio: 1/1;
     margin: 1rem;
-    border: solid;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -184,18 +193,18 @@ img {
     
 }
 .letter{
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: Quicksand;
-    width: 7%;
+    width: 9%;
     aspect-ratio: 1/1;
-    margin: 1rem;
+    margin: 1.5rem;
     border: solid;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .reset{
-    font-size: 3rem;
+    font-size: 4rem;
     width: fit-content;
     padding: .5rem;
     margin: 1rem;
@@ -207,6 +216,11 @@ img {
 .disable{
     pointer-events: none;
     opacity: 40%;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+    
 }
 .letterBox{
     display: flex;
@@ -248,7 +262,7 @@ img {
 .quit{
     font-size: 4rem;
     width: 20vw;
-    border: solid;
+    border: none;
     border-radius: 5px;
     padding: .5rem;
     margin: 2rem;
@@ -299,32 +313,27 @@ img {
 
    .play-effect {
     border: none;
-    z-index: 0;
     overflow: hidden;
   }
-  .play-effect:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 5px;
-    box-shadow:
-     -7px -7px 20px 0px #fff9,
-     -4px -4px 5px 0px #fff9,
-     7px 7px 20px 0px #0002,
-     4px 4px 5px 0px #0001;
-    transition: all 0.3s ease;
-  }
-  .play-effect:hover {
+
+  .play-effect:active{
+    background-color: transparent;
     color: #fff;
+    animation: 3s ease;
   }
-  .play-effect:hover:after {
-    top: 0;
-    height: 100%;
+  
+  .quit:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+
   }
-  .play-effect:active {
-    top: 10px;
+
+  .letter:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+
   }
