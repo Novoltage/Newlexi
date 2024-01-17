@@ -1,8 +1,8 @@
 /*
 All css for lexicony
-*/
+
 @font-face {
-    font-family: Quicksand;
+    font-family: 'Quicksand';
     src:url('/Quicksand/Quicksand-VariableFont_wght.ttf')
         url('/Quicksand/Quicksand-VariableFont_wght.eot')
         url('/Quicksand/Quicksand-VariableFont_wght.woff');
@@ -10,13 +10,13 @@ All css for lexicony
         url('Assets/Quicksand/Quicksand-VariableFont_wght.ttf')
         url('Assets/Quicksand/Quicksand-VariableFont_wght.woff');
 }
-
+*/
 
 *{
     
     padding: 0;
     margin: 0;
-    font-family:Quicksand;
+    font-family:'Quicksand';
     color: #616060;
     
 }
@@ -126,7 +126,7 @@ img {
 
 .winstatement{
     font-size: 3rem;
-    font-family: Quicksand;
+    font-family: 'Quicksand';
     margin: 1rem;
 }
 
@@ -194,7 +194,7 @@ img {
 }
 .letter{
     font-size: 4rem;
-    font-family: Quicksand;
+    font-family: 'Quicksand';
     width: 9%;
     aspect-ratio: 1/1;
     margin: 1.5rem;
