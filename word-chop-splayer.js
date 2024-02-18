@@ -2076,7 +2076,7 @@ for(i=0; i != -1;) {
 i = guessWord.indexOf(letter, i+1); // +1 so it starts after the letter it finds
 
 if(i === -1 && c ===0){
-  document.getElementById(`l${life}`).classList.add("disable");
+  document.getElementById(`l${life}`).classList.add("heartlost");
   life--
   //alert(`wrong \n You have ${life} tries left`)
   

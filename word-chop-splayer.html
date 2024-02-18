@@ -7,38 +7,34 @@
   <title>Lexicony</title>
 </head>
 
-<body>
+<body onload="getRandomWord();">
 
   <section class="display">
 
-
-    <div id="word" class="word">
-      <button class="sready ready-effect" onclick="getRandomWord();">Ready?</button>
-    </div>
     <div class="lives">
-      <div id="l5" class="off">
+      <div id="l5" class=" ">
         <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div id="l4" class="off">
+      <div id="l4" class=" ">
         <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div id="l3" class="off">
+      <div id="l3" class=" ">
         <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div id="l2" class="off">
+      <div id="l2" class=" ">
         <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
-      <div id="l1" class="off">
+      <div id="l1" class=" ">
         <img src="./Assets/Heartcorazon.svg" alt="Heartcorazon">
       </div>
     </div>
-    <div id="guessBox" class="off">
+    <div id="guessBox" class="guessBox">
       <div id="0"></div>
     </div>
-    <div id="hintBox" class="off">
+    <div id="hintBox" class="hintBox">
       <p class="Print"> </p>
     </div>
-    <div id="letters" class="off">
+    <div id="letters" class="letters">
       <button id="A" class="letter" onclick="guess('A')">A</button>
       <button id="B" class="letter" onclick="guess('B')">B</button>
       <button id="C" class="letter" onclick="guess('C')">C</button>
@@ -65,7 +61,6 @@
       <button id="X" class="letter" onclick="guess('X')">X</button>
       <button id="Y" class="letter" onclick="guess('Y')">Y</button>
       <button id="Z" class="letter" onclick="guess('Z')">Z</button>
-      <button class="reset" onclick="reset()">Reset</button>
 
     </div>
 
